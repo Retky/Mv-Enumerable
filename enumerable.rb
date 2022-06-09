@@ -16,7 +16,7 @@ module MyEnumerable
   def filter
     filtered = []
     each do |e|
-      filtered.push(e) if yield(e) 
+      filtered.push(e) if yield(e)
     end
     filtered
   end
