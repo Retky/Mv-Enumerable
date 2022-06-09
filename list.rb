@@ -1,9 +1,12 @@
+require_relative './enumerable'
+
 class MyList
-  def initialize(list)
+  include MyEnumerable
+  def initialize(*list)
     @list = list
   end
 
   def each(&blk)
-    yield(@list.each(&blk))
+    @list.each(&blk)
   end
 end
